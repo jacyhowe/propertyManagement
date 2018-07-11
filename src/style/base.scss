@@ -16,16 +16,16 @@ body {
     font-family: $font-encode;
 }
 
-.app-wrapper {
+.layout-grid {
     width: 100vw;
     height: 100vh;
 
     display: grid;
-    grid-template-rows: [content-s header-e] 13.6rem [header-e bar-s] 4rem [bar-e content-s] 1fr [page-e content-e];
+    grid-template-rows: [page-s header-e] 13.6rem [header-e bar-s] 4rem [bar-e content-s] 1fr [page-e content-e];
     grid-template-columns: [page-s] 14rem [content-s] 1fr [content-e] 14rem [page-e];
 }
 
-.header-wrapper__bar{
+.header__bar{
     height: 4rem;
     background-color: $color-gray-D8;
     grid-row: bar-s/bar-e;
