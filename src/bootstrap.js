@@ -23,9 +23,9 @@ function main() {
       <BrowserRouter>
         <Switch>
           <Layout>
-            <Route path="/" component={Signin}/>
-            <Route path="/signup" component={Signin}/>
-            <Route path="/signin" component={Signup}/>
+            <Route path="/" exact component={Signin}/>
+            <Route path="/signin" component={Signin}/>
+            <Route path="/signup" component={Signup}/>
           </Layout>
         </Switch>
       </BrowserRouter>
