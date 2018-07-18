@@ -3,7 +3,7 @@ import { reduxForm, Field } from "redux-form";
 
 import { FormTitle } from "../formTitle";
 import { FormInput, FormButton } from "../formFields";
-import TextLink from '../textLink';
+import TextLink from "../textLink";
 
 class SignupForm extends Component {
   render() {
@@ -11,11 +11,11 @@ class SignupForm extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit} className="sign-in-form">
+      <form onSubmit={handleSubmit} className="sign-up-form">
         <FormTitle className="sign-up-form__title" text="New User" />
         <Field
           className="sign-up-form__fullname"
-          placeholder="Enter Full Name"
+          placeholder="Enter Your Full Name"
           name="fullname"
           type="text"
           title="Full Name"
@@ -52,9 +52,10 @@ class SignupForm extends Component {
           title="Create Account"
           component={FormButton}
         />
-        <div className="sign-up-form__text-links">
-          <TextLink to='/dashboard' text=''/>
+        <div className='sign-up-form__text-links'>
+            <TextLink to='/signin' text='Already Registered? Login'/>
         </div>
+        
       </form>
     );
   }

@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
+import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 //import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
@@ -16,7 +16,6 @@ import Layout from './components/layout';
 
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
-
 
 function main() {
   ReactDOM.render(
@@ -27,7 +26,7 @@ function main() {
             <Route path="/" exact component={Signin}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
-            <Route path="/dashboard" component={Signup}/>
+            {/* <Route path="/dashboard" component={Dashboard}/> */}
           </Layout>
         </Switch>
       </BrowserRouter>
