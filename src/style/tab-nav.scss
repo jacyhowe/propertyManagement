@@ -2,13 +2,14 @@
     display: grid;
     grid-template-rows: [tab-s] 50px [tab-e content-s] 1fr [content-e];
 
+    height: 100%;
     &__tabs {
         grid-row: tab-s/tab-e;
 
         display: grid;
         grid-template-rows: [s] 1fr [m] 1fr 1fr [e];
         grid-template-columns: repeat(auto-fill, 1fr);
-        grid-auto-flow: column;
+        grid-auto-flow: column; 
         justify-items: center;
         align-items: center;
 
