@@ -23,10 +23,7 @@
 .form-input,
 .form-textarea {
     &__title {
-        color: $color-red-BA;
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 2.3rem;
+        @include red-title;
     }
     &__input {
         height: 4rem;
@@ -54,11 +51,24 @@
 
 //button
 
+.form-button,
+.form-button-small {
+    &__button {
+        transition: all .2s ease;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95) translateY(2.05px);
+        }
+    }
+}
+
 .form-button {
     
     &__button {
         height: 4rem;
-        width: 21.6rem;
+        width: 31.6rem;
         border-radius: 2rem;
         background-color: $color-red-BA;
         font-size: 2.2rem;
@@ -72,7 +82,6 @@
 
 .form-button-small {
     &__button {
-        width: 13rem;
         border-radius: 1.6rem;
         border: 1px solid $color-gray-4D;
         width: 7.4rem;
@@ -81,6 +90,8 @@
         font-size: 1.4rem;
         line-height: 1.7rem;
         text-align: center;
+
+        width: 11rem;
     
         // display: flex;
         // justify-content: center;
@@ -92,3 +103,23 @@
         background-color: $color-red-BA;
     }
 }
+
+//IMAGE
+
+.form-image {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        @include red-title;
+        margin-bottom: 2rem;
+    }
+
+    &__image {        
+        width: 16rem;
+        height: 13.7rem;
+        border: none;
+        
+        
+    }
+}
+
