@@ -11,9 +11,11 @@ class NewsletterGrid extends Component {
     handleAddNewsletter = () => {
         this.props.history.push('/newsletter/new');
     }
-
+    
     componentDidMount() {
-        this.props.fetchNewsletters();
+        setTimeout(() => {
+            this.props.fetchNewsletters();
+        }, 1000);
     }
 
     

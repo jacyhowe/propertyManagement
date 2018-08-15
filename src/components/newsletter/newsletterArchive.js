@@ -27,7 +27,7 @@ class NewsletterArchive extends Component {
                     
                     {
                         this.props.newsletters.map(newsletters => {
-                            return <ArchiveItem {...newsletters}/>
+                            return <ArchiveItem key={newsletters._id}{...newsletters}/>
                         })
                     }
                 </div>

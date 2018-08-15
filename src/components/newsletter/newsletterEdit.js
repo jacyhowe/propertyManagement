@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import NewNewsletterForm from './newsletterNewForm';
 
 
 class EditNewsletter extends Component {
 
-    onSubmit = (fields) => {
-        this.props.history.push('/dashboard/edit/:_id');
+    onSubmit = fields => {
+        this.props.history.push('/dashboard');
      }
 
      onCancel = () => {
          this.props.history.push('/dashboard');
+     };
+
+     componentDidMount() {
+         
+         console.log(this.props.match.params.id);
      }
 
     render() {
