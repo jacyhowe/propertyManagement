@@ -17,10 +17,7 @@ class NewsletterGrid extends Component {
             this.props.fetchNewsletters();
         }, 1000);
     }
-
     
-
-
     render() {
         return(
             <div className="newsletter-grid">

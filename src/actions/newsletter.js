@@ -1,4 +1,4 @@
-import {
+ import {
     SET_NEWSLETTERS,
     FETCH_NEWSLETTER_ID
 } from './types';
