@@ -6,6 +6,7 @@ import history from '../../history';
 import Requests from './requests';
 import RequestBoxes from './requestBoxes';
 
+
 class RequestsGrid extends Component {
 
     handleAddRequest = () => {
@@ -19,6 +20,7 @@ class RequestsGrid extends Component {
                 <Button className='newsletter-grid__button' icon='fas fa-plus' callback={() => this.handleAddRequest()}/>
                 <RequestBoxes />
                 <Requests />
+                
             </div>
         )
     }
