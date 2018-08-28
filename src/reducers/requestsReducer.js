@@ -4,17 +4,17 @@ import {
 
 const INTITAL_STATE = {
     requests: [],
-    selectedRequest: 'pending'      
+    selectedRequestType: 'pending'      
 }
 
 export default function(state = INTITAL_STATE, action){
 
     switch (action.type) {
         case CHANGE_SELECTED_REQUEST_TYPE:
-            const selectedRequest= action.payload
+            const boxType = action.payload
             return {
                 ...state,
-                selectedRequest: boxType
+                selectedRequestType: boxType
             }   
         default: return state;
     }
