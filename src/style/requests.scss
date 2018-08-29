@@ -1,6 +1,7 @@
 .requests {
     grid-row: s/e;
-    grid-column: request-s/request-e;
+    grid-column: request-s/request/e;
 
-    height: 500px;
+    display: grid;
+    grid-row-gap: 2rem;
 }

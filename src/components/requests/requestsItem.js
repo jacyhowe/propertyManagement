@@ -19,7 +19,18 @@ class RequestsItem extends Component {
                     <div className='requests-item__date'>
                         06/02/91
                     </div>
-                    <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log('trying to change request item status')}/>                    
+                    <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log('trying to change request item status')}/> 
+                    <div className='requests-item__description'>
+                        <img 
+                            className='requests-item-description-image'
+                            src='http://via.placeholder.com/160x94'                            
+                        />
+                        <p className='requests-item__description-text'>
+                            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        </p>
+                    </div>                   
             </div>
         )
     }
