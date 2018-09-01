@@ -84,7 +84,7 @@ export class FormImage extends Component {
                 <input 
                     className='form-image__replace'
                     type='button'
-                    value='Replace'
+                    value='Upload'
                     onClick= { () => document.getElementById('file') ? document.getElementById('file').click() : ''
                              }
                     />

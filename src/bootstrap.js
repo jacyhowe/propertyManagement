@@ -28,6 +28,7 @@ import NewNewsletter from './components/newsletter/newsletterNew';
 import EditNewsletter from './components/newsletter/newsletterEdit';
 import NewsletterDetail from './components/newsletter/newsletterDetail';
 
+import NewRequests from './components/requests/requestsNew';
 
 function main() {
   ReactDOM.render(
@@ -45,7 +46,8 @@ function main() {
             <Route path="/newsletter/edit/:id" component={requireAuth(EditNewsletter)}/>
             <Route path="/newsletter/detail/:id" component={requireAuth(NewsletterDetail)}/>
 
-            <Route path="/requests/new" component={requireAuth(NewNewsletter)}/>
+            <Route path="/requests/new" component={requireAuth(NewRequests)}/>
+            
 
           </Layout>
         </Switch>

@@ -9,7 +9,7 @@ import Button from '../button';
 class NewsletterGrid extends Component {
 
     handleAddNewsletter = () => {
-        history.push('/newsletter/new');
+        this.props.history.push('/newsletter/new');
     }
     
     componentDidMount() {

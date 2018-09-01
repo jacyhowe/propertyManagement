@@ -49,10 +49,10 @@ class RequestsItem extends Component {
                         >
                             <div className='item-description'>
                                 <img 
-                                    className='item-description-img'
+                                    className='item-description__img'
                                     src='http://via.placeholder.com/160x94'                            
                                 />
-                                <p className='item-description-text'>
+                                <p className='item-description__text'>
                                     Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                     Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                     Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

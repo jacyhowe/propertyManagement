@@ -17,7 +17,7 @@ class RequestsGrid extends Component {
     render() {
         return (
             <div className='requests-grid'>
-                <Button className='newsletter-grid__button' icon='fas fa-plus' callback={() => this.handleAddRequest()}/>
+                <Button className='requests-grid__button' icon='fas fa-plus' callback={() => this.handleAddRequest()}/>
                 <RequestBoxes />
                 <Requests />
                 
