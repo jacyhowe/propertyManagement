@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 class NewRequest extends Component {
 
     onSubmit = (fields) => {
-        this.props.createNewRequest(this.props._id, {}, () => {
+        this.props.createNewRequest(this.props._id, fields, () => {
             this.props.history.push('/dashboard');
         })
     };
