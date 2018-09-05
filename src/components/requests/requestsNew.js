@@ -8,9 +8,19 @@ import { connect } from 'react-redux';
 class NewRequest extends Component {
 
     onSubmit = (fields) => {
-        this.props.createNewRequest(this.props._id, fields, () => {
-            this.props.history.push('/dashboard');
-        })
+
+        const { title, body, image } = fields;
+
+        var formData = new FormData();
+        formData.append('title', title);
+        formData.append('body', body);
+        formData.append('image', image);
+
+        console.log(title, body, image);
+
+        // this.props.createNewRequest(this.props._id, fields, () => {
+        //     this.props.history.push('/dashboard');
+        // })
     };
         
      

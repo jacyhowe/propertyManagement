@@ -64,8 +64,10 @@ export class FormButton extends Component {
 export class FormImage extends Component {
 
     handleSelectedImage = (event) => {
+        const { input: { onChange } } = this.props;
         var image = document.getElementById('new-newsletter-image');
         image.src = URL.createObjectURL(event.target.files[0]);
+        onChange(event.target.files[0])
     }
 
 
