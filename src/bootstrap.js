@@ -16,12 +16,12 @@ import history from './history';
 
 import Layout from './components/layout';
 
-//AUTH
+
 import requireAuth from './components/requireAuth';
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 
-//Dashboard
+
 import Dashboard from './components/dashboard';
 
 import NewNewsletter from './components/newsletter/newsletterNew';
