@@ -6,11 +6,18 @@ import history from '../../history';
 import Requests from './requests';
 import RequestBoxes from './requestBoxes';
 
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
+
 
 class RequestsGrid extends Component {
 
     handleAddRequest = () => {
         history.push('/requests/new');
+    }
+
+    componentDidMount(){
+        this.props.fetchRequest()
     }
 
 
@@ -25,5 +32,7 @@ class RequestsGrid extends Component {
         )
     }
 }
+
+RequestsGrid = connect(null, actions)(RequestsGrid);
 
 export default RequestsGrid;
