@@ -1,5 +1,6 @@
 .newsletter-archive {
     margin-top: 3.85rem;
+
     grid-row: archive-s/archive-e;
     grid-column: archive-s/archive-e;
 
@@ -22,7 +23,7 @@
     margin-top: 1.6rem;
     display: grid;
     grid-row-gap: 1.6rem;
-    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
     align-content: start;
 }
 

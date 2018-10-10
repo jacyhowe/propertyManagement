@@ -1,10 +1,6 @@
 {
   "name": "react-redux",
   "version": "1.0.0",
-  "engines": {
-    "node": "8.10.0",
-    "npm": "5.6.0"
-  },
   "description": "Basic skeleton codebase for React/Redux applications.",
   "scripts": {
     "postinstall": "copy env.example.js env.js",
@@ -16,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git@github.com:bottega-code-school/js-builder.git"
+    "url": "git@github.com:bottega-code-school/js-builder.git"
   },
   "keywords": [
     "es6",
@@ -64,17 +60,16 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react": "^16.2.0",
-    "react-animate-height": "^2.0.4",
+    "react-animate-height": "^2.0.1",
     "react-dom": "^16.0.0",
     "react-redux": "5.0.6",
     "react-router-dom": "^4.2.2",
     "reactstrap": "^5.0.0-alpha.4",
     "redux": "^3.7.2",
-    "redux-form": "^7.4.2",
+    "redux-form": "^7.3.0",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "thunk": "0.0.1",
     "url-loader": "^0.5.9",
     "webpack": "^3.1.0",
     "webpack-merge": "^4.1.0"

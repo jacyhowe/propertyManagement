@@ -2,10 +2,12 @@
 import axios from 'axios';
 
 import { ROOT_URL } from '../config';
-import { AUTHENTICATE_USER } from './types';
+
+import {
+    AUTHENTICATE_USER
+} from './types';
 
 export function signUp(fields, success) {
-    console.log(fields);
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signUp`, fields)
             .then(response => {
@@ -27,15 +29,13 @@ export function signIn(fields, success) {
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signIn`, fields)
             .then(response => {
-                
                dispatch({
                    type: AUTHENTICATE_USER,
                    payload: response.data
                })
-                const { token } = response.data;
-                console.log(response.data);
-                localStorage.setItem('token', token);
-                success();
+               const { token } = response.data;
+               localStorage.setItem('token', token);
+               success();
             })
             .catch(err => {
                 if(err) { console.log(err) }

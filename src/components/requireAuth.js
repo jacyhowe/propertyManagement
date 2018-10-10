@@ -5,10 +5,9 @@ import history from '../history';
 
 export default function(ComposedComponent) {
     class Authentication extends Component {
-
         componentWillMount() {
             if(!this.props.authenticated) {
-                history.push('/'); 
+                history.push('/');
             }
         }
         componentWillUpdate(nextProps) {
@@ -20,10 +19,11 @@ export default function(ComposedComponent) {
             return <ComposedComponent {...this.props}/>
         }
     }
+
     function mapStateToProps(state) {
         const { authenticated } = state.auth;
         return { authenticated } 
     }
-return connect(mapStateToProps)(Authentication);
-
+    
+    return connect(mapStateToProps)(Authentication)
 }

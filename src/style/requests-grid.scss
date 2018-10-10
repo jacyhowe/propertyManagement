@@ -1,20 +1,19 @@
 .requests-grid {
     justify-content: center;
+    grid-row: content-s/content-e;
 
-    grid-row: request-s/request-e;
-    
     display: grid;
     grid-template-rows: [add-s] 4.7rem [add-e s boxes-s] 1fr [boxes-e e];
-    grid-template-columns: [boxes-s] 16rem [boxes-e request-s] 960px [request-e];
+    grid-template-columns: [boxes-s] 16rem [boxes-e requests-s] 960px [requests-e];
 
-    // grid-row-gap: 3.85rem;
     grid-column-gap: 6.1rem;
+
 
     &__button {
         grid-row: add-s/add-e;
-        grid-column: request-s/request-e;
+        grid-column: requests-s/requests-e;
         justify-self: end;
         align-self: center;
         margin-right: 1rem;
-    }   
+    }
 }

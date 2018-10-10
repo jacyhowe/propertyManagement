@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RequestsBox from './requestsBox';
-import { request } from 'http';
+
 
 
 class RequestBoxes extends Component {
     render() {
         return (
             <div className='request-boxes'>
-                 <RequestsBox title='Pending' count={this.props.pendingCount}/>
-                <RequestsBox title='In-progess' count={this.props.progressCount}/>
-                <RequestsBox title='Complete' count={this.props.completeCount}/>
+                <RequestsBox title={'pending'} count={this.props.pendingCount}/>
+                <RequestsBox title={'in-progess'} count={this.props.progressCount}/>
+                <RequestsBox title={'complete'} count={this.props.completeCount}/>
             </div>
         )
     }
@@ -26,7 +26,7 @@ function mapStateToProps(state){
         requests.map(request => {
             if(request.status == 'pending') {
                 pendingCount += 1;
-            } else if(request.status == 'progress') {
+            } else if(request.status == 'in-progress') {
                 progressCount += 1;
             } else if(request.status == 'complete') {
                 completeCount += 1;

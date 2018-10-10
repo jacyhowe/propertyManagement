@@ -1,3 +1,4 @@
+
 .requests-box {
     align-content: center;
 
@@ -7,32 +8,31 @@
     border-radius: .5rem;
 
     color: $color-red-BA;
+
     display: grid;
     justify-items: center;
     grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
     grid-template-columns: [s] 1fr [e];
-    
 
     &__count {
         align-self: end;
         font-size: 7rem;
-        line-height: 8.5rem;
+        line-height: 8.1rem;
         margin-bottom: 1rem;
 
         grid-row: s/m;
         grid-column: s/e;
-        
-      
-
     }
+
     &__title {
         align-self: start;
         font-size: 2rem;
         line-height: 2.3rem;
+
         grid-row: m/e;
         grid-column: s/e;
-
     }
+
     &__point {
         height: 4rem;
         width: 4rem;
@@ -42,13 +42,15 @@
 
         justify-self: end;
         align-self: center;
-        transform: translateX(54%) rotate(45deg);
+
+        transform: translateX(52%) rotate(45deg);
+
         border: .15rem solid $color-red-BA;
         border-bottom: none;
         border-left: none;
-
     }
-}  
+}
+
 
 .requests-box-active {
     background-color: $color-red-BA;
@@ -67,7 +69,6 @@
 }
 
 .requests-box-inactive {
-    background-color: white;
     border-color: $color-gray-E6;
 
     .requests-box {
@@ -79,5 +80,4 @@
             display: none;
         }
     }
-
 }

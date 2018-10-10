@@ -1,22 +1,22 @@
 import {
-    CHANGE_SELECTED_REQUEST_TYPE, SET_REQUESTS
+ CHANGE_SELECTED_REQUEST_TYPE,
+ SET_REQUESTS
 } from './types';
 
 import axios from 'axios';
 import { ROOT_URL } from '../config';
 
 export function changeSelectedRequestType(boxType) {
-    return( 
+    return (
         {
             type: CHANGE_SELECTED_REQUEST_TYPE,
             payload: boxType
         }
-    )    
-}
+    )
+};
 
 export function createNewRequest(userId, formData, success) {
     const token = localStorage.getItem('token');
-
     return function() {
         axios.post(`${ROOT_URL}/requests/new`, formData, {
             headers: {
@@ -25,7 +25,7 @@ export function createNewRequest(userId, formData, success) {
             }
         })
             .then(response => {
-                console.log(response.data)
+                console.log(response.data);
                 success();
             })
             .catch(err => {
@@ -34,20 +34,35 @@ export function createNewRequest(userId, formData, success) {
     }
 }
 
-export function fetchRequest() {
+export function fetchRequests() {
     const token = localStorage.getItem('token');
     return function(dispatch) {
         axios.get(`${ROOT_URL}/requests`, {
             headers: { authorization: token }
         })
-        .then(response => {
-            dispatch({
-                type: SET_REQUESTS,
-                payload: response.data
+            .then(response => {
+                dispatch({
+                    type: SET_REQUESTS,
+                    payload: response.data
+                })
             })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
+export function changeStatus({_id, status}) {
+    const token = localStorage.getItem('token');
+    return function() {
+        axios.post(`${ROOT_URL}/requests/update-status`, {_id, status}, {
+            headers: { authorization: token }
         })
-        .catch(err => {
-            console.log(err);
-        })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 }

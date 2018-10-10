@@ -15,23 +15,25 @@
 @import 'form-fields';
 @import 'text-link';
 
+// DASHBOARD
 @import 'dashboard';
 @import 'tab-nav';
 
-//newsletters
+// NEWSLETTERS
 @import 'newsletter-grid';
 @import 'newsletter-box';
 @import 'newsletter-archive';
 @import 'newsletter-latest';
-@import 'new-newsletter';
-@import 'new-newsletter-form';
+@import 'newsletter-new';
+@import 'newsletter-new-form';
 @import 'newsletter-detail';
 
+// BUTTON
 @import 'button';
 
-// requests
+// REQUESTS 
 @import 'requests-grid';
-@import 'requests';
-@import 'request-boxes';
+@import 'requests-boxes';
 @import 'requests-box';
+@import 'requests';
 @import 'requests-item';

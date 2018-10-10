@@ -17,7 +17,6 @@
     &__image {
         justify-self: center;
         align-self: center;
-
     }
 
     &__title {
@@ -27,21 +26,17 @@
         font-weight: 500;
         line-height: 5rem;
         text-align: center;
-
-
     }
-    &__image { 
+    &__image {
         grid-row: s/m;
         z-index: -10;
     }
-
     &__body {
         grid-row: m/e;
         p {
             margin: 6.3rem 6.05rem;
             line-height: 2.2rem;
             font-size: 1.6rem;
-
         }
     }
 
@@ -49,7 +44,7 @@
         grid-row: s/m;
         grid-column: s/e;
         justify-self: end;
-        align-self: end;     
+        align-self: end;
 
         margin-right: 1rem;
         margin-bottom: 1.2rem;

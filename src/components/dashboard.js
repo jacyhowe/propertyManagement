@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import TabNav from './tabNav';
+import React, { Component } from "react";
 
-import NewsletterGrid from './newsletter/newsletterGrid';
-import RequestsGrid from './requests/requestGrid';
+import TabNav from './tabnav';
+import NewsletterGrid from "./newsletter/newsletterGrid";
+import RequestsGrid from "./requests/requestsGrid";
 
 class Dashboard extends Component {
 
@@ -20,33 +20,33 @@ class Dashboard extends Component {
                     title: 'Requests',
                     active: false,
                     component: <RequestsGrid history={this.props.history}/>
-                },
-            ]   
+                }
+            ]
         }
     }
 
     handleTabChange = (title) => {
         const tabs = this.state.tabs;
 
-        tabs.map(tab => {           
+        tabs.map(tab => {
             if(tab.title == title) {
                 tab.active = true
             } else {
                 tab.active = false
             }
         })
-        
+
         this.setState({ tabs });
     }
 
+  render() {
+    return (
+        <div className='dashboard'>
+            <TabNav handleClick={(title) => this.handleTabChange(title)} tabs={this.state.tabs}/>
+        </div>
+    )
+  }
 
-    render() {
-        return( 
-            <div className='dashboard'>
-                <TabNav handleClick={(title) => this.handleTabChange(title)} tabs={this.state.tabs}/>
-            </div>
-        )
-    }
 }
 
 export default Dashboard;
